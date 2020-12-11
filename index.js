@@ -15,7 +15,7 @@ var imageURL;
 
 function getWeather() {
     const appid = process.env.APP_ID;
-    const query = "Mysore";
+    const query = "mysore";
     console.log(query);
     const unit = "metric"
     const url = "https://api.openweathermap.org/data/2.5/weather?appid=" + appid + "&q=" + query + "&units=" + unit; //url for weather API
@@ -45,7 +45,7 @@ app.get('/', (req, res) => {
 
 app.get('/destination', (req, res) => {
     getWeather();
-    res.render('destination', { temp, imageURL });
+    res.render('destination', {id:"Destination", temp, imageURL });
 });
 
 app.get('/places/:id', (req, res) => {

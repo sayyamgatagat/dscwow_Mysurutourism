@@ -6,10 +6,12 @@ h1 {
 .navbar {
     background-color: #070d59!important;
 }
-body{
+
+body {
     width: 100%;
     padding: 0%;
 }
+
 .nav-link {
     color: white!important;
 }
@@ -63,16 +65,15 @@ body{
     border: none;
 }
 
-.placeimg{
+.placeimg {
     padding-top: 12%;
 }
 
-.info{
+.info {
     padding-top: 2%;
 }
 
-
-  .placepara{
+.placepara {
     font-family: 'Josefin Sans', sans-serif;
     font-size: large;
     padding: 3% 7%;

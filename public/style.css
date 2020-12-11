@@ -10,16 +10,14 @@ body {
     font-size: 1.1rem;
     padding-top: 0;
     padding-bottom: 0;
-}
-
-.nav-link {
-    margin-left: 20px;
+    transition: .5s;
 }
 
 .nav-link {
     font-weight: 500;
     color: black !important;
     font-family: "Roboto Mono", monospace;
+    margin-left: 20px;
 }
 
 .nav-link:hover {
@@ -40,6 +38,14 @@ body {
     margin-left: auto;
 }
 
+nav.scrolled {
+    background: #070D59 !important;
+}
+
+.nav-link.scrolled {
+    color: white!important;
+}
+
 .dropdown-menu {
     font-weight: 500;
     background-color: rgba(255, 255, 255, 0.5) !important;
@@ -48,9 +54,25 @@ body {
     margin-left: 20px;
 }
 
+.dropdown-menu.scrolled {
+    background-color: #070d59!important;
+}
+
+.dropdown-item.scrolled {
+    color: white!important;
+}
+
+.dropdown-item.scrolled:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.degree.scrolled {
+    color: white;
+}
+
 .home {
-    position: absolute;
-    top: 0;
+    position: relative;
+    top: -50px;
     width: 100%;
     height: 100%;
 }
@@ -104,4 +126,87 @@ body {
     .carousel .item {
         height: 350px;
     }
+}
+
+h1::selection {
+    background: #db0962;
+    color: white;
+}
+
+h2::selection {
+    background: #db0962;
+    color: white;
+}
+
+h3::selection {
+    background: #db0962;
+    color: white;
+}
+
+h4::selection {
+    background: #db0962;
+    color: white;
+}
+
+h5::selection {
+    background: #db0962;
+    color: white;
+}
+
+h6::selection {
+    background: #db0962;
+    color: white;
+}
+
+p::selection {
+    background: #db0962;
+    color: white;
+}
+
+a::selection {
+    background: #db0962 !important;
+    color: white !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+.contact {
+    text-align: center;
+    padding: 0;
+    background-color: #eb8f8f;
+}
+
+.insta {
+    display: flex;
+    justify-items: center;
+    justify-content: space-evenly;
+    padding: 2%;
+}
+
+footer {
+    background-color: #070D59;
+    color: white;
+}
+
+.image {
+    width: 25px;
+    height: 25px;
+}
+
+.imagebig {
+    width: 35px;
+    height: 35px;
+}
+
+.footer-logo {
+    width: 250px;
+    height: 250px;
+}
+.footer-footer{
+    padding-bottom: 0 !important;
+}
+.modals{
+    
 }
