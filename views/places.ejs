@@ -3,22 +3,10 @@
 <div class="row">
 
     <div class="col-md-7 info">
-        <h1>Mysuru Palace</h1>
-        <p class="placepara">The Mysore Palace is a historical palace and the royal residence at Mysore in the
-            Indian State of Karnataka. It is the official residence of the Wadiyar dynasty and the seat of the
-            Kingdom of Mysore. The palace is in the centre of Mysore, and faces the Chamundi Hills eastward. Mysore
-            is commonly described as the 'City of Palaces', and there are seven palaces including this one; however,
-            'Mysore Palace' refers specifically to this one within the Old fort.
-
-            The land on which the palace now stands was originally known as puragiri (literally, citadel), and is
-            now known as the Old Fort. Yaduraya built the first palace inside the Old Fort in the 14th century,
-            which was demolished and constructed multiple times. The current structure was constructed between 1897
-            and 1912, after the Old Palace was burnt ablaze.
-
-            Mysore Palace is now one of the most famous tourist attractions in India, after the Taj Mahal, with more
-            than 6 million annual visitors.</p>
+        <h1><%=place.name%></h1>
+        <p class="placepara"><%=place.info%></p>
         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.1580209631366!2d76.65362768581696!3d12.305143157932164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf701103f9a1f9%3A0xc37fbae2a124da0d!2sMysore%20Palace!5e0!3m2!1sen!2sin!4v1607686935410!5m2!1sen!2sin"
+            src="<%=place.map%>"
             width="750" height="250" frameborder="5" style="border-radius:20px; margin-left: 5%;" allowfullscreen=""
             aria-hidden="false" tabindex="0"></iframe>
     </div>
@@ -32,7 +20,6 @@
     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
     crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="app.js"></script>
 </body>
 
 </html>
