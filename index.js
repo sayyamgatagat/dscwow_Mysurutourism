@@ -14,7 +14,7 @@ var temp;
 var imageURL;
 
 function getWeather() {
-    const appid = "2cb65000c7edcba65515cd6387b0130f";
+    const appid = process.env.APP_ID;
     const query = "Mysore";
     console.log(query);
     const unit = "metric"
@@ -33,7 +33,6 @@ function getWeather() {
                 const weatherDes = weatherData.weather[0].description;
                 const icon = weatherData.weather[0].icon;
                 imageURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
-                console.log(temp, imageURL);
             });
         }
     });
