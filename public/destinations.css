@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap');
+h1 {
+    text-align: center;
+}
+
+.navbar {
+    background-color: #070d59!important;
+}
+body{
+    width: 100%;
+    padding: 0%;
+}
+.nav-link {
+    color: white!important;
+}
+
+.dropdown-menu {
+    background-color: #070d59!important;
+}
+
+.dropdown-item {
+    color: white!important;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.card:hover .card-body {
+    color: white;
+    opacity: 1;
+    background-color: rgba(219, 9, 98, 0.7);
+}
+
+.card-body {
+    opacity: 0;
+    position: absolute;
+    background-color: rgb(219, 9, 98);
+    height: 100%;
+    text-align: center;
+    width: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.card-img-top {
+    height: 100%;
+}
+
+.card-title {
+    padding-top: 20%;
+    opacity: 1 !important;
+    font-size: 1.8rem;
+}
+
+.topdes {
+    padding: 5%;
+}
+
+.btn {
+    font-size: medium;
+    background-color: orange;
+    outline: none;
+    border: none;
+}
+
+.placeimg{
+    padding-top: 12%;
+}
+
+.info{
+    padding-top: 2%;
+}
+
+
+  .placepara{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: large;
+    padding: 3% 7%;
+}
