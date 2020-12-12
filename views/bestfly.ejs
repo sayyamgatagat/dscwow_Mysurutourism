@@ -1,0 +1,43 @@
+<%-include("header")-%>
+    <form style="padding: 5%;padding-bottom: 3%;" action="/flight" method="POST">
+        <div class="row" style="padding: 2%;">
+            <div class="col">
+                <label for="code">Departure From</label>
+                <input type="text" name="code" class="form-control" placeholder="Airport Code" required>
+            </div>
+            <div class="col">
+                <label for="depdate">Departure Date</label>
+                <input type="date" class="form-control" name="depdate" required>
+            </div>
+        </div>
+        <div class="row" style="text-align: center;">
+            <div class="col">
+                <button type="submit" style="text-align: center;" class="btn btn-primary">Find Cheapest Flight</button>
+            </div>
+        </div>
+    </form>
+
+    <%if(errmsg !=undefined){%>
+        <div class="flightdetails" style="text-align: center; padding: 3%; box-shadow: 5px 7px 20px gray;">
+            <h1 style="color: red;">
+                <%=errmsg%>
+            </h1>
+        </div>
+        <%}%>
+            <%if(flight !=undefined){%>
+                <h1 style="margin-bottom: 2%;">Flight Details</h1>
+                <div class="card col-md-3" style="margin: auto;margin-bottom: 5%; text-align: center; padding: 2%; box-shadow: 5px 7px 20px gray;">
+                    <h2>
+                        <%=carrier.Name%>
+                    </h2>
+                    <h4>
+                        <%=places[1].Name%>  <i class="fas fa-plane"></i>  <%=places[0].Name%>
+                    </h4>
+                    <p style="font-size: large;margin-top:1%;">
+                        Price : <span style="font-weight: 500;">₹ <%=flight.MinPrice%></span> Approx
+                    </p>
+                    <p style="font-size:medium;">Departure Date : <%=departDate%></p>
+                </div>
+                <%}%>
+
+                    <%-include("footer")-%>

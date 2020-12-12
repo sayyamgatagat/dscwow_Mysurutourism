@@ -1,0 +1,21 @@
+<%- include("header") -%>
+
+    <div class="row">
+        <div class="col-md-7">
+            <h2 style="text-align: center;padding:5% 0;"><%=item.name%></h2>
+            <p style="margin-left: 7%;margin-right: 7%;font-size: large;"><%=item.info%></p>
+            <br>
+            <h6 style="font-size: large;margin: 0 7%;text-align: center;">Price : <%=item.price%></h6>
+            <br>
+            <h6 style="font-size: large;margin: 0 7%;text-align: center;">Where to Eat : <%=item.where%></h6>
+            <div style="text-align: center;margin-top: 3%;">
+                <a href="<%=item.recipe%>" target="_blank" type="button" class="btn btn-primary">Get Recipe</a>
+            </div>
+        </div>
+        <div class="col-md-4 item_img_div">
+            <img src="<%=item.imagel%>" alt="<%=item.name%>" class="food_item_img">
+        </div>
+    </div>
+
+
+<%-include("footer")-%>

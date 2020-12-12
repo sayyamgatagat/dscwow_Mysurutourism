@@ -28,13 +28,13 @@ body {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-.card:hover .card-body {
+.topdes .card:hover .card-body, .food-items .card:hover .card-body {
     color: white;
     opacity: 1;
     background-color: rgba(219, 9, 98, 0.7);
 }
 
-.card-body {
+.topdes .card-body, .food-items .card-body {
     opacity: 0;
     position: absolute;
     background-color: rgb(219, 9, 98);

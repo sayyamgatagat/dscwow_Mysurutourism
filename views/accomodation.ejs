@@ -1,26 +1,35 @@
 <%-include("header")-%>
-
+    <h1 style="text-align: center;margin: 2% 0;">Top Hotels in Mysuru</h1>
     <div>
-        <%for(var i=0;i<hotelRes.results.length;i++){%>
-            <div class="wrapper">
-                <div class="product-img">
-                    <img src="<%=hotelRes.results[i].thumbnailUrl%>" height="420" width="327">
-                </div>
-                <div class="product-info" style="text-align: center;">
-                    <div class="product-text">
-                        <h1><%=hotelRes.results[i].name%></h1>
-                        <h2><%=hotelRes.results[i].address.streetAddress%></h2>
-                        <p>Rating : <%for(var j=0;j<hotelRes.results[i].starRating;j++){%>
-                            <i class="fa fa-star fixed" style="text-shadow: 1px 1px 1px black;"></i>
-                            <%}%>
-                             <br><br><span style="font-size: 1.6rem;font-weight: 500;"><%=hotelRes.results[i].ratePlan.price.current%> per night</span></p>
-                    </div>
-                    <div class="product-price-btn">
-                        <a class="btn btn-primary" href="https://in.hotels.com/ho<%=hotelRes.results[i].id%>/?pa=1&q-check-out=2020-12-15&tab=description&q-room-0-adults=2&YGF=2&q-check-in=2020-12-14&MGT=1&WOE=2&WOD=1&ZSX=0&SYE=3&q-room-0-children=0" type="button">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <%}%>
-    </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4" style="margin:4% 8%;">
+            <%for(var i=0;i<hotelRes.results.length;i++){%>
+                <div class="col">
+                    <div class="card h-100" style="margin-left: 6%;margin-right: 6%;text-align: center;box-shadow: 5px 7px 20px gray;border-radius: 20px;">
+                        <img src="<%=hotelRes.results[i].thumbnailUrl%>" class="card-img-top" alt="..." style="width: 100%;height: 40vh;object-fit: cover;border-top-left-radius: 20px;border-top-right-radius: 20px;"></img>
+                        <div class="card-body" style="padding-bottom: 0;">
+                            <h5 class="card-title" style="padding-top: 1%;">
+                                <%=hotelRes.results[i].name%>
+                            </h5>
+                            <p class="card-text">
+                                <%=hotelRes.results[i].address.streetAddress%> <br>
+                            </p>
+                        </div>
 
-    <%-include("footer")-%>
+                        <small class="text-muted" style="font-size: medium;">
+                            <%for(var j=0;j<hotelRes.results[i].starRating;j++){%>
+                                <i class="fa fa-star fixed"></i>
+                                <%}%>
+                        </small>
+                        <span style="font-size: 1.6rem;font-weight: 500;text-align: center;margin: 2% 0;"><%=hotelRes.results[i].ratePlan.price.current%> per night</span>
+                        <div class="product-price-btn" style="padding:0;text-align: center;">
+                            <a class="btn btn-primary"
+                                href="https://in.hotels.com/ho<%=hotelRes.results[i].id%>/?pa=1&q-check-out=2020-12-15&tab=description&q-room-0-adults=2&YGF=2&q-check-in=2020-12-14&MGT=1&WOE=2&WOD=1&ZSX=0&SYE=3&q-room-0-children=0"
+                                type="button">Book Now</a>
+                        </div>
+
+                    </div>
+                </div>
+                <%}%>
+        </div>
+
+        <%-include("footer")-%>

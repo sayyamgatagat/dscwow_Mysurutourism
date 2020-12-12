@@ -1,10 +1,12 @@
-var stars = Array.from(document.getElementsByClassName('fa-star'));
+var stars = Array.from(document.querySelectorAll('.fa-star.r'));
+console.log(stars[0]);
 var starsFinal = document.getElementById('stars');
 
 stars.forEach(element => {
     element.addEventListener('mouseover', () => {
         var num = parseInt(element.classList.toString().split(' ')[2]);
         // console.log(typeof num);
+        console.log(element);
         for (var i = 0; i < num; i++)
             stars[i].classList.add('hovered');
     });
