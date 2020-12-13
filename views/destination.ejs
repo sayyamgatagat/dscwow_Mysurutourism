@@ -1,82 +1,32 @@
 <%- include("header") -%>
     <!-- top destinations -->
-    <h1>Top Destinations</h1>
+    <h1 style="margin-top: 2%;">Top Destinations</h1>
     <div class="topdes">
         <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-                <div class="card h-100">
-                    <img src="images/mysurupalace.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Mysuru Palace</h5>
-                        <a class="btn btn-success btn-lg btn-block" href="https://youtu.be/4BPHj3k76C4"
-                            target="_blank">Explore in
-                            VR</a>
-                        <a class="btn btn-success btn-lg btn-block" href="/places/Mysuru Palace">Know More</a>
-                        <a class="btn btn-success btn-lg btn-block" href="https://go.echoar.xyz/GRBs"
-                            target="_blank">View in AR</a>
+            <%for(var i=0; i < rows.length; i++){%>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/cover/<%=rows[i].cover%>" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%=rows[i].name%>
+                            </h5>
+                            <%if(rows[i].vr !== null){%>
+                                <a class="btn btn-success btn-lg btn-block" href="<%=rows[i].vr%>"
+                                    target="_blank">Explore
+                                    in
+                                    VR</a>
+                                <%}%>
+                                    <a class="btn btn-success btn-lg btn-block" href="/places/<%=rows[i].name%>">Know
+                                        More</a>
+                                    <%if(rows[i].name==='Mysuru Palace' ){%>
+                                        <a class="btn btn-success btn-lg btn-block" href="https://go.echoar.xyz/GRBs"
+                                            target="_blank">View in AR</a>
+                                        <%}%>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="images/brindavan.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Brindavan Gardens</h5>
-                        <a class="btn btn-success btn-lg btn-block" href="https://youtu.be/qZciw_MaJ1s"
-                            target="_blank">Explore in
-                            VR</a>
-                        <a class="btn btn-success btn-lg btn-block" href="/places/Brindavan Gardens">Know More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="images/C7.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Sri Chamundeshwari Temple</h5>
-                        <button class="btn btn-success btn-lg btn-block" href="https://youtu.be/njZfd0pfANA"
-                            target="_blank">Explore in
-                            VR</button>
-                        <a class="btn btn-success btn-lg btn-block" href="/places/Shri Chamnudeshwari Temple">Know
-                            More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="images/mysuruzoo.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Shri Chamarajendra Zoological Park</h5>
-                        <a class="btn btn-success btn-lg btn-block" href="https://youtu.be/cfQKRRYfpaY"
-                            target="_blank">Explore in
-                            VR</a>
-                        <a class="btn btn-success btn-lg btn-block"
-                            href="/places/Sri Chamarajendra Zoological Gardens">Know More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="images/St-Philomena's-Church-Mysore.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">St. Philomena's Cathedral</h5>
-                        <a class="btn btn-success btn-lg btn-block" href="/places/St. Philomena's Cathedral">Know
-                            More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="images/kishkindha-molika-bonsai.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Kishkindha Molika Bonsai Garden</h5>
-                        <a class="btn btn-success btn-lg btn-block" href="https://youtu.be/ksZyfso-jXA">Explore in
-                            VR</a>
-                        <a class="btn btn-success btn-lg btn-block" href="/places/Kishkindha Moolika Bonsai Garden"
-                            target="_blank">Know More</a>
-                    </div>
-                </div>
-            </div>
+                <%}%>
         </div>
     </div>
 

@@ -1,4 +1,5 @@
 <%-include("header")-%>
+    <h1 style="padding-top: 2%;">Find Cheapest Flight for Mysore Domestic Airport</h1>
     <form style="padding: 5%;padding-bottom: 3%;" action="/flight" method="POST">
         <div class="row" style="padding: 2%;">
             <div class="col">
@@ -37,7 +38,13 @@
                         Price : <span style="font-weight: 500;">₹ <%=flight.MinPrice%></span> Approx
                     </p>
                     <p style="font-size:medium;">Departure Date : <%=departDate%></p>
+                    <a type="button" class="btn btn-primary air-btn" style=""></a>
+                    <div style="text-align: center;">
+                        <a href="https://www.yatra.com/domestic-flights/flights-to-mysore.html" type="button" class="btn btn-primary air-btn" style="margin-top: 3%;width: 33%;text-align: center;">Book Now</a>
+                    </div>
                 </div>
                 <%}%>
+
+                <h3 style="padding-bottom: 2%; text-align: center;">Nearest International Airport is Kempegowda International Airport, Bengaluru</h3>
 
                     <%-include("footer")-%>

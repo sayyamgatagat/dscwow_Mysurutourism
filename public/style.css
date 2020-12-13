@@ -235,7 +235,7 @@ footer {
 
 #fh2 {
   padding: 2px 15px;
-  color: #ff4d4d;
+  color: #000000;
   text-align: center;
 }
 
@@ -667,9 +667,11 @@ ul.reachtype {
   list-style: none;
   justify-content: center;
 }
-.reachtype a{
+
+.reachtype a {
   color: #070D59;
 }
+
 .reachicon {
   display: block;
   height: 50px;
@@ -680,12 +682,12 @@ ul.reachtype li {
   padding: 5%;
 }
 
-.within{
+.within {
   display: block;
   text-align: center;
 }
 
-.within > *{
+.within>* {
   padding: 0.5%;
 }
 
@@ -698,7 +700,6 @@ ul.reachtype li {
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,500,700');
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-
 .blog-card {
   display: flex;
   flex-direction: column;
@@ -750,22 +751,23 @@ ul.reachtype li {
   }
 }
 
-.food-title{
+.food-title {
   padding-top: 30%!important;
   font-size: 2rem!important;
 }
 
-.food_item_img{
+.food_item_img {
   width: 100%;
   height: 100%;
 }
-.item_img_div{
+
+.item_img_div {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10% 4%;
-
 }
+
 /* 
 .reachitem {
   position: relative;
@@ -807,3 +809,85 @@ ul.reachtype li {
   opacity: 1;
   transform: translateY(-50px);
 } */
+
+.floating-weather {
+  position: fixed;
+  left: 0;
+  top: 150px;
+  background-color: white;
+  box-shadow: 2px 2px 3px black;
+  width: 60px;
+  height: 50px;
+  z-index: 17;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.degree {
+  color: black!important;
+  margin-top: 3px;
+  padding-top: 9px;
+}
+
+.weather-img {
+  margin-top: 5px;
+}
+
+.img-fluid {
+  padding: 10%;
+}
+
+.card-body {
+  text-align: center;
+  color: #070D59;
+}
+
+.navcardchild {
+  background-color: transparent;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+  from {
+    -webkit-transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+.img-fluid:hover {
+  -webkit-animation-name: rotate;
+  -webkit-animation-duration: .5s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+}
+
+.air-btn:hover {
+  background-color: orange;
+}
+
+.about {
+  margin: auto;
+  background-color: #fceef5!important;
+}
+
+.contact{
+  background-color: #fceef5;
+  padding-top: 4%;
+}
+#feedback{
+  background-color: #fceef5;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+.review-sec{
+  background-color: white;
+  padding-top: 3%;
+}

@@ -13,6 +13,9 @@
                 style="border-radius:20px; margin-left: 5%;" allowfullscreen="" aria-hidden="false"
                 tabindex="0"></iframe>
 
+            <br>
+            <br>
+
             <h2 style="text-align: center;">Reviews</h2>
 
             <%if(rows.length> 0){%>
@@ -79,11 +82,11 @@
                     </a>
                 </div>
                 <%} else {%>
-                    <h6>No Reviews !!</h6>
+                    <h6 style="text-align: center;">No Reviews !!</h6>
                     <%}%>
         </div>
         <div class="col-md-4 placeimg">
-            <img src="<%=place.imagel%>" alt="destimg">
+            <img src="/images/<%=place.image%>" alt="destimg">
             <div class="ratings" style="margin: 0;margin-top: 6%;text-align: center;">
                 <script src="https://use.fontawesome.com/a6f0361695.js"></script>
 

@@ -73,3 +73,17 @@ window.onscroll = function () {
         });
     }
 }
+
+var weather_box = document.getElementsByClassName('floating-weather')[0];
+var weather_img = document.getElementsByClassName('weather-img')[0];
+var deg = document.getElementsByClassName('degree')[0];
+
+weather_box.addEventListener('mouseover', () => {
+    weather_img.setAttribute("style", "display:none;");
+    deg.setAttribute("style", "display:display;");
+});
+
+weather_box.addEventListener('mouseleave', () => {
+    weather_img.setAttribute("style", "display:initial;");
+    deg.setAttribute("style", "display:none;");
+});
