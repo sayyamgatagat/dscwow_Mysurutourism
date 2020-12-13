@@ -268,7 +268,7 @@ app.post("/flight", (request, response) => {
     var returnDate = request.body.retDate;
     console.log(sourceDes, departDate, returnDate);
 
-    var req = unirest("GET", "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/in/inr/en-US/" + sourceDes + "-sky/BLR-sky/" + departDate);
+    var req = unirest("GET", "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/in/inr/en-US/" + sourceDes + "-sky/myq-sky/" + departDate);
 
     req.headers({
         "x-rapidapi-key": process.env.FLIGHTAPI,
